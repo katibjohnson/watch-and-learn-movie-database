@@ -1,0 +1,107 @@
+<body class="body">
+  <h1 class="title title-font">Watch & Learn</h1>
+  <h2 class="description">
+    Bridge the gap between your out-of-date learning materials and how people
+    actually talk. Choose from our cutting-edge selection of newer features in
+    your target language or challenge yourself by watching a historical film.
+  </h2>
+  <section class="main">
+    <div class="form">
+      <form
+        #searchForm="ngForm"
+        (ngSubmit)="search(searchForm)"
+        class="actual-form"
+      >
+        <section class="section-1">
+          <label for="language">Language:</label>
+          <select
+            id="language"
+            name="language"
+            class="dropdown"
+            placeholder="Language"
+            required
+            ngModel
+          >
+            <option value="ar">Arabic</option>
+            <option value="zh">Chinese</option>
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="it">Italian</option>
+            <option value="ja">Japanese</option>
+            <option value="ko">Korean</option>
+            <option value="pt">Portuguese</option>
+            <option value="es">Spanish</option>
+            <option value="ru">Russian</option>
+          </select>
+          <label for="decadeFrom">Start Decade:</label>
+          <select
+            id="decadeFrom"
+            name="decadeFrom"
+            class="dropdown"
+            required
+            ngModel
+          >
+            <option value="1920-01-01">1920's</option>
+            <option value="1930-01-01">1930's</option>
+            <option value="1940-01-01">1940's</option>
+            <option value="1950-01-01">1950's</option>
+            <option value="1960-01-01">1960's</option>
+            <option value="1970-01-01">1970's</option>
+            <option value="1980-01-01">1980's</option>
+            <option value="1990-01-01">1990's</option>
+            <option value="2000-01-01">2000's</option>
+            <option value="2010-01-01">2010's</option>
+            <option value="2020-01-01">2020's</option>
+          </select>
+          <label for="decadeTo">End Decade:</label>
+          <select
+            id="decadeTo"
+            name="decadeTo"
+            class="dropdown"
+            required
+            ngModel
+          >
+            <option disabled selected>To</option>
+            <option value="1929-12-31">1920's</option>
+            <option value="1939-12-31">1930's</option>
+            <option value="1949-12-31">1940's</option>
+            <option value="1959-12-31">1950's</option>
+            <option value="1969-12-31">1960's</option>
+            <option value="1979-12-31">1970's</option>
+            <option value="1989-12-31">1980's</option>
+            <option value="1999-12-31">1990's</option>
+            <option value="2009-12-31">2000's</option>
+            <option value="2019-12-31">2010's</option>
+            <option value="2029-12-31">2020's</option>
+          </select>
+        </section>
+        <section class="section-2">
+          <form
+            #keywordForm="ngForm"
+            (input)="getKeywords(keywordForm)"
+            class="keyword-form"
+          >
+            <input
+              type="text"
+              class="keyword"
+              name="keyword"
+              placeholder="Keyword (optional)"
+              ngModel
+            />
+          </form>
+          <select name="keywordOption" id="keywordOption" ngModel>
+            <option *ngFor="let keyword of keywords" value="{{ keyword.id }}">
+              {{ keyword.name }}
+            </option>
+          </select>
+        </section>
+        <button class="title-font submit" type="submit">Submit</button>
+      </form>
+    </div>
+    <hr class="horizontal-line" />
+    <button class="watchlist-btn title-font" (click)="openWatchlist()">
+      Watchlist
+    </button>
+  </section>
+</body>

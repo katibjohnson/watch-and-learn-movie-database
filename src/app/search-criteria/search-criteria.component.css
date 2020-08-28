@@ -1,0 +1,146 @@
+.body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-font {
+  font-family: "EB Garamond", serif;
+}
+
+.title {
+  font-family: "EB Garamond", serif;
+  font-size: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 10px;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+}
+
+.actual-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.dropdown {
+  border: none;
+  font-size: 16px;
+}
+
+.keyword {
+  border: 0;
+  font-size: 16px;
+  border: none;
+}
+
+.keyword-selector {
+  border: none;
+}
+
+.submit,
+.submit:active {
+  text-decoration: none;
+  color: red;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+  border: none;
+  background-color: white;
+  outline: none;
+}
+
+.italics {
+  font-style: italic;
+}
+
+hr {
+  border-top: 1px dashed red;
+  width: 75%;
+}
+
+.vertical_dotted_line {
+  display: none;
+}
+
+.watchlist-btn,
+.watchlist-btn:active {
+  text-decoration: none;
+  color: red;
+  padding: 5px;
+  font-size: 24px;
+  border: none;
+  background-color: white;
+  outline: none;
+}
+
+.description {
+  font-style: italic;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 50px;
+  padding-top: 0;
+  padding-bottom: 30px;
+
+  text-align: center;
+}
+
+@media only screen and (min-width: 600px) {
+  .body {
+    height: 95vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .title {
+    font-size: 90px;
+  }
+
+  .main {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form {
+    justify-content: center;
+  }
+
+  .actual-form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-1 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .section-2 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .watchlist-btn {
+    position: fixed;
+    bottom: 5%;
+  }
+}

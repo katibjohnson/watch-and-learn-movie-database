@@ -1,0 +1,15 @@
+<div class="movie-card">
+  <p class="movie-title">{{ movieRef.title }}</p>
+  <img
+    src="{{ baseUrl }}{{ movieRef.poster_path }}"
+    alt="{{ movieRef.title }}"
+    class="movie-image"
+    (click)="showDetails()"
+  />
+  <div class="below-image">
+    <p class="movie-year">{{ movieRef.release_date | date: "yyyy" }}</p>
+    <button class="wl-button" (click)="addMovie()">
+      <i class="far fa-plus-square"></i>
+    </button>
+  </div>
+</div>
